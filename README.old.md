@@ -1,2 +1,0 @@
-# chad-gpt
-Bro

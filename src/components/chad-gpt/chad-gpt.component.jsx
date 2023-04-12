@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from "axios";
-import "./chad-gpt.styles.css";
 
-import ChadImage from './chad.png'; // Replace this with the actual path to the farmer image
+import ChadImage from './chad2.png'; // Replace this with the actual path to the farmer image
 
 
 const brands = ["USN", "NPL", "Nutritech"];
@@ -21,7 +20,7 @@ const styles = {
       height: 'auto',
     },
     input: {
-      width: '90%',
+      width: '80%',
       padding: '1rem',
       borderRadius: '4px',
       border: '1px solid #ccc',
@@ -40,7 +39,7 @@ const styles = {
       borderRadius: '4px',
     },
     answerContainer: {
-      width: '90%',
+      width: '80%',
       borderRadius: '4px',
       backgroundColor: '#f1f1f1',
       padding: '1rem',
@@ -59,13 +58,59 @@ const styles = {
       fontWeight: 'bold',
     },
     dropdown: {
-        width: '90%',
-        padding: '1rem',
+      width: '50%',
+      padding: '1rem',
+      borderRadius: '4px',
+      border: '1px solid #ccc',
+      marginBottom: '1rem',
+      backgroundColor: '#fff',
+    },
+    emailButton: {
+      backgroundColor: '#4CAF50',
+      border: 'none',
+      color: 'white',
+      padding: '0.75rem 1.5rem',
+      textAlign: 'center',
+      textDecoration: 'none',
+      display: 'inline-block',
+      fontSize: '1rem',
+      margin: '1rem',
+      cursor: 'pointer',
+      borderRadius: '4px',
+    },
+    '@media (max-width: 768px)': {
+      image: {
+        maxWidth: '50%',
+        height: 'auto',
+      },
+      heading: {
+        fontSize: '1.2rem',
+        margin: '0.5rem',
+      },
+      introduction: {
+        fontSize: '0.75rem',
+        margin: '0.5rem',
+      },
+      input: {
+        padding: '0.5rem',
         borderRadius: '4px',
         border: '1px solid #ccc',
-        marginBottom: '1rem',
-        backgroundColor: '#fff',
       },
+      button: {
+        padding: '0.5rem 1rem',
+        fontSize: '0.8rem',
+        margin: '0.5rem',
+      },
+      dropdown: {
+        padding: '0.5rem',
+        marginBottom: '0.5rem',
+      },
+      emailButton: {
+        padding: '0.5rem 1rem',
+        fontSize: '0.8rem',
+        margin: '0.5rem',
+      },
+    },
   };
 
 const ChadGPT = () => {
@@ -125,7 +170,7 @@ const ChadGPT = () => {
   
     return (
       <div style={styles.container}>
-        <h1 style={styles.heading}>Meet Chad GPT!</h1>
+        <h1 style={styles.heading}>Meet your new gym buddy, Chad GPT!</h1>
         <img src={ChadImage} alt="Ask Chad a question, weakling!" style={styles.image} />
         <p style={styles.introduction}>
           I love to use: 
